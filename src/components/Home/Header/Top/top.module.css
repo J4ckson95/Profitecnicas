@@ -1,4 +1,25 @@
 .top_container {
+    width: 100vw;
+    padding: .5rem;
     background-color: var(--BG_SecondColor);
     color: #FFF;
+}
+
+.container {
+    width: 90vw;
+    margin-inline: 5vw;
+    display: flex;
+    position: relative;
+
+    li {
+        font-size: 13px;
+        font-weight: 500;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+
+    .count {
+        position: absolute;
+        right: 0;
+    }
 }

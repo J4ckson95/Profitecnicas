@@ -2,7 +2,7 @@
 
 :root {
   --BG_PrimaryColor: #fff;
-  --BG_SecondColor: #004164;
+  --BG_SecondColor: #002336;
 }
 
 * {
@@ -16,6 +16,8 @@ body {
     sans-serif;
   background-color: var(--BG_PrimaryColor);
 }
+
+
 
 ul {
   list-style: none;
