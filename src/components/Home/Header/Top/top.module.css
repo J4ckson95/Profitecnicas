@@ -5,9 +5,9 @@
     color: #FFF;
 }
 
-.container {
-    width: 90vw;
-    margin-inline: 5vw;
+.menu_top {
+    width: 60vw;
+    margin-inline: 20vw;
     display: flex;
     position: relative;
 
@@ -18,7 +18,7 @@
         cursor: pointer;
     }
 
-    .count {
+    & :nth-child(3) {
         position: absolute;
         right: 0;
     }

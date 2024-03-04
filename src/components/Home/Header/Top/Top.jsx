@@ -2,10 +2,10 @@ import styled from "./top.module.css"
 const Top = () => {
     return (
         <div className={styled.top_container}>
-            <ul className={styled.container}>
-                <li><a>Quines Somos</a></li>
-                <li><a>Contacto</a></li>
-                <li className={styled.count}><a>Mi Cuenta</a></li>
+            <ul className={styled.menu_top}>
+                <li>Quines Somos</li>
+                <li>Contacto</li>
+                <li>Mi Cuenta</li>
             </ul>
         </div>
     );

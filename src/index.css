@@ -17,6 +17,16 @@ body {
   background-color: var(--BG_PrimaryColor);
 }
 
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: pretty;
+}
+
+p {
+  text-wrap: balance;
+}
 
 
 ul {
