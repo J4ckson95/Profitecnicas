@@ -10,7 +10,7 @@ const Head = () => {
             </div>
             <div className={style.Head_Search}>
                 <input placeholder="Titulo, Autor o ISBN"></input>
-                <button><img src={logoSearch}></img></button>
+                <div className={style.search}><img src={logoSearch}></img></div>
             </div>
             <div className={style.Head_Count}>
                 <img src={cart}></img>
