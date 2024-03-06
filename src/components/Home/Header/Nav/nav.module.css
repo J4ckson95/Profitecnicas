@@ -1,0 +1,15 @@
+nav {
+    width: 100vw;
+    background-color: var(--BG_SecondColor);
+    color: white;
+}
+
+.containerNav {
+    width: 60vw;
+    margin-inline: 20vw;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

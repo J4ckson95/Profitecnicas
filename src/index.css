@@ -3,6 +3,7 @@
 :root {
   --BG_PrimaryColor: #fff;
   --BG_SecondColor: #004164;
+  --ComplementaryColor: #94c1e1;
 }
 
 * {

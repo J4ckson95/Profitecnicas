@@ -4,11 +4,11 @@
     padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border: 1px solid red;
+    justify-content: space-around;
 
     .Head_Logo {
         object-fit: cover;
+        cursor: pointer;
 
         img {
             max-width: 250px;
@@ -42,20 +42,42 @@
             border-radius: 0 25px 25px 0;
 
             img {
-                width: 50px;
+                width: 30px;
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                width: 25px;
+                margin: -15px 0 0 -15px;
 
             }
         }
     }
 
     .Head_Count {
-        img {
-            width: 30px;
-            aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .Count_cart {
+            position: relative;
+
+            img {
+                width: 30px;
+                aspect-ratio: 1;
+                position: relative;
+                margin-right: 20px;
+            }
+
+            span {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: -5px;
+                right: 0;
+                border-radius: 25px;
+                background-color: var(--ComplementaryColor);
+                text-align: center;
+            }
         }
     }
 

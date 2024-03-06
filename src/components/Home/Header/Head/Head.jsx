@@ -13,7 +13,10 @@ const Head = () => {
                 <div className={style.search}><img src={logoSearch}></img></div>
             </div>
             <div className={style.Head_Count}>
-                <img src={cart}></img>
+                <div className={style.Count_cart}>
+                    <img src={cart}></img>
+                    <span>0</span>
+                </div>
                 <p>Mi Compra</p>
             </div>
         </div>
