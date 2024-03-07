@@ -1,0 +1,10 @@
+.promotion_Container {
+    width: 60vw;
+    height: 35vh;
+    margin: 3vw 20vw 0 20vw;
+
+    img {
+        object-fit: cover;
+    }
+
+}
