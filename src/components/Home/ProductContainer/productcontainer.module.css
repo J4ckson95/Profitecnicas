@@ -1,0 +1,9 @@
+.productContainer {
+    width: 60vw;
+    margin-inline: 20vw;
+    border: 1px solid red;
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}

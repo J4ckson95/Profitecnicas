@@ -7,7 +7,7 @@ const Home = () => {
         <>
             <Header></Header>
             <img className={style.promotion_Container} src={promotion}></img>
-            <ProductContainer></ProductContainer>
+            <ProductContainer section="Literatura"></ProductContainer>
         </>
     );
 }

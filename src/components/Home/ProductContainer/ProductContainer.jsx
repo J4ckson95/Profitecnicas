@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-const ProductContainer = () => {
+import Product from "./Product/Product.jsx";
+import style from "./productcontainer.module.css"
+const ProductContainer = ({ section }) => {
     const [products, setProducts] = useState([])
     useEffect(() => {
         const getData = async () => {
@@ -9,11 +11,10 @@ const ProductContainer = () => {
         }
         getData()
     }, []);
-    console.log(products);
     return (
-        <div>
-            <h3>Recomendados :</h3>
-            {products ? <h1>Entro</h1> : <h1>No entro</h1>}
+        <div className={style.productContainer}>
+            <h3>Recomendados : {section ? section : "text"} </h3>
+            {products.length > 0 && products.map((element, index) => <Product data={element} key={index}></Product>)}
         </div>
     );
 }
