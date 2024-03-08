@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
 const ProductContainer = () => {
     const [products, setProducts] = useState([])
-    useEffect(
-        async () => {
-            const data = await fetch("localhost:/api/products")
-            setProducts(data)
-        }, []);
+    useEffect(() => {
+        const getData = async () => {
+            const data = await fetch("http://localhost:8080/api/products")
+            const result = await data.json()
+            setProducts(result.payload)
+        }
+        getData()
+    }, []);
+    console.log(products);
     return (
         <div>
             <h3>Recomendados :</h3>
