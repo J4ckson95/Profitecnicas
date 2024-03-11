@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import style from "./nav.module.css"
 const Nav = () => {
     return (
         <nav>
             <ul className={style.containerNav}>
-                <li><a>Inicio</a></li>
+                <li><Link to={"/"}>Inicio</Link></li>
                 <li><a>Libros</a></li>
                 <li><a>Otros Productos</a></li>
                 <li><a>Búsqueda Avanzada</a></li>

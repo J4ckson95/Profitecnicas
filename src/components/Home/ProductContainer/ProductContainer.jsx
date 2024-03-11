@@ -14,7 +14,9 @@ const ProductContainer = ({ section }) => {
     return (
         <div className={style.productContainer}>
             <h3>Recomendados : {section ? section : "text"} </h3>
-            {products.length > 0 && products.map((element, index) => <Product data={element} key={index}></Product>)}
+            <div className={style.productList}>
+                {products.length > 0 && products.map((element, index) => <Product data={element} key={index}></Product>)}
+            </div>
         </div>
     );
 }

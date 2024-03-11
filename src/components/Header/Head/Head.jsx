@@ -1,6 +1,6 @@
-import titleLogo from "../../../../asset/logo.png"
-import cart from "../../../../asset/carrito-de-compras.png"
-import logoSearch from "../../../../asset/buscar.png"
+import titleLogo from "../../../asset/logo.png"
+import cart from "../../../asset/carrito-de-compras.png"
+import logoSearch from "../../../asset/buscar.png"
 import style from "./head.module.css"
 const Head = () => {
     return (

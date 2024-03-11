@@ -1,7 +1,7 @@
+import style from "./product.module.css"
 const Product = ({ data }) => {
-    console.log(data);
     return (
-        <div>
+        <div className={style.productItem}>
             <img src={data.thumbnail}></img>
             <h4>{data.title}</h4>
             <p><strong>{data.price}</strong></p>
