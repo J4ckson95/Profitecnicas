@@ -1,5 +1,6 @@
 .productContainer {
     width: 60vw;
+    height: fit-content;
     margin-inline: 20vw;
     padding: 1rem;
     margin-bottom: 20px;

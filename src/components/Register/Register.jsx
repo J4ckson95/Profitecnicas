@@ -1,7 +1,10 @@
 import { useForm } from "react-hook-form"
+import { Navigate } from "react-router-dom"
+import { useState } from "react"
 import style from "./register.module.css"
 const Register = () => {
     const { register, handleSubmit } = useForm()
+    const [redirect, setRedirec] = useState(false)
     const submit = handleSubmit((data) => {
         fetch("http://localhost:8080/api/users/register", {
             method: "POST",
@@ -9,7 +12,10 @@ const Register = () => {
             headers: {
                 "Content-Type": "application/json",
             },
-        }).then((res) => res.json()).then((data) => console.log(data))
+        }).then((res) => res.json()).then((data) => {
+            const { status } = data
+            if (status === "Success") setRedirec(true)
+        })
     })
     return (
         <div className={style.register}>
@@ -43,6 +49,7 @@ const Register = () => {
                     <button type="submit">Registrarme</button>
                 </form>
             </div>
+            {redirect && <Navigate to={"/login"}></Navigate>}
         </div>
     );
 }

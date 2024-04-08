@@ -5,7 +5,9 @@ const ProductContainer = ({ section }) => {
     const [products, setProducts] = useState([])
     useEffect(() => {
         const getData = async () => {
-            const data = await fetch("http://localhost:8080/api/products")
+            const data = await fetch("http://localhost:8080/api/products", {
+                credentials: "include"
+            })
             const result = await data.json()
             setProducts(result.payload)
         }

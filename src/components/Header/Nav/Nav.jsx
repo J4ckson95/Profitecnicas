@@ -5,7 +5,7 @@ const Nav = () => {
         <nav>
             <ul className={style.containerNav}>
                 <li><Link to={"/"}>Inicio</Link></li>
-                <li><a>Libros</a></li>
+                <li><Link to={"/library"}>Libros</Link></li>
                 <li><a>Otros Productos</a></li>
                 <li><a>Búsqueda Avanzada</a></li>
                 <li><a>Novedades</a></li>

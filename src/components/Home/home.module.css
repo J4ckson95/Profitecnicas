@@ -1,10 +1,15 @@
-.promotion_Container {
-    width: 60vw;
-    height: 35vh;
-    margin: 3vw 20vw 0 20vw;
+.home {
+    margin-bottom: 10vh;
 
-    img {
-        object-fit: cover;
+    .promotion_Container {
+        width: 60vw;
+        height: fit-content;
+        margin: 3vw 20vw 0 20vw;
+        position: relative;
+
+        img {
+            object-fit: cover;
+        }
+
     }
-
 }

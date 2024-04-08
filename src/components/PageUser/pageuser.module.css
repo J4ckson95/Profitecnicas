@@ -1,0 +1,29 @@
+.pageContainer {
+    width: 30vw;
+    height: fit-content;
+    align-content: center;
+    margin: 20vh 35vw 0 35vw;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+
+    h3 {
+        margin-bottom: 10px;
+    }
+
+    strong {
+        margin-left: 2vw;
+        font-weight: normal;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+}

@@ -1,10 +1,11 @@
 .register {
     width: 100vw;
-    height: 62vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: start;
     margin-top: 10vh;
+    margin-bottom: 10vh;
 
     .container {
         width: 20%;

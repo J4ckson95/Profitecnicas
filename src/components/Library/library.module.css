@@ -1,0 +1,38 @@
+.libraryContainer {
+    width: 60vw;
+    height: fit-content;
+    margin: 5vh 20vw 20vh 20vw;
+
+    .products {
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .page {
+        display: flex;
+        justify-content: center;
+        margin-top: 5vh;
+        font-size: 1.2rem;
+
+        p {
+            font-weight: 700;
+        }
+
+        button {
+            text-align: center;
+            text-wrap: nowrap;
+            width: auto;
+            padding: .5rem;
+            margin-inline: 2vw;
+            font-size: 1rem;
+            border-radius: 5px;
+            color: white;
+            background-color: var(--BG_SecondColor);
+            cursor: pointer;
+        }
+    }
+}

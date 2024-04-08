@@ -1,0 +1,47 @@
+.containerAddproduct {
+    width: 60vw;
+    height: fit-content;
+    margin: 10vw 20vw 0 20vw;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--BG_SecondColor);
+        margin-bottom: 3vh;
+    }
+
+    form {
+        div {
+            width: 40%;
+            margin: 0 30% 20px 30%;
+
+            label {
+                font-size: 1rem;
+                font-weight: 600;
+                margin-right: 20px;
+            }
+
+            input {
+                height: 25px;
+                font-size: .9rem;
+                border-radius: 5px;
+                padding-left: 10px;
+            }
+        }
+
+        button {
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+    }
+}

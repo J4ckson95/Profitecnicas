@@ -1,0 +1,12 @@
+.button {
+    text-align: center;
+    text-wrap: nowrap;
+    width: auto;
+    padding: .5rem;
+    margin: 2% 10% 5% 10%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--BG_SecondColor);
+    cursor: pointer;
+}

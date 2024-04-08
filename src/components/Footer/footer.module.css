@@ -1,8 +1,11 @@
 .footer {
     width: 100vw;
-    height: 15vh;
+    height: 10vh;
     padding: 1vw;
     background-color: var(--BG_SecondColor);
+    position: fixed;
+    bottom: 0;
+    color: white;
 
     .footerContainer {
         width: 60%;

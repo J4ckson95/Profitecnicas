@@ -1,0 +1,35 @@
+td {
+    margin: 20px 0 20px 0;
+    text-align: center;
+}
+
+.article {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    h3 {
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    img {
+        width: 40px;
+    }
+}
+
+.quantity {
+    text-align: center;
+
+    h3 {
+        display: inline;
+    }
+
+    button {
+        padding: 10px;
+        border-radius: 5px;
+        margin: 0 20px 0 20px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}

@@ -1,7 +1,6 @@
 .Head {
     width: 60vw;
-    margin-inline: 20vw;
-    padding: 20px;
+    margin: 1vh 20vw 1vh 20vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -10,7 +9,7 @@
         object-fit: cover;
         cursor: pointer;
 
-        img {
+        .logo {
             max-width: 250px;
         }
     }
