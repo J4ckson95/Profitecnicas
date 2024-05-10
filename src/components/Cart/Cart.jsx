@@ -3,22 +3,24 @@ import { useEffect, useState } from "react";
 import ProductCart from "./ProductCart/ProductCart.jsx";
 const Cart = () => {
     const [data, setData] = useState([])
-    const [totalPrice, setTotalPrice] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0)
+    const [change, setChange] = useState(false)
     useEffect(() => {
         const getData = async () => {
             const query = await fetch(`http://localhost:8080/api/carts/`, { credentials: "include" })
             const result = await query.json()
-            if (result) setData(result.payload.products)
+            if (result) setData(result.payload)
         }
         getData()
-    }, []);
-    const handlePrice = (price) => {
-        setTotalPrice(prevPrice => prevPrice + price);
-    }
-    const ResetTotal = () => {
-        setTotalPrice(0)
-    }
-
+        setChange(false)
+    }, [change]);
+    useEffect(() => {
+        let total = 0
+        data.forEach((element) => {
+            total += element.quantity * element.product.price;
+        })
+        setTotalPrice(total)
+    }, [data])
     return (
         <div className={style.Cart_Page}>
             <h2 className={style.title}>Mi Compra</h2>
@@ -32,14 +34,14 @@ const Cart = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {data.length > 0 && data.map((element, index) => <ProductCart ResetTotal={ResetTotal} onPrice={handlePrice} key={index} data={element}></ProductCart>)}
+                    {data.length > 0 && data.map((element, index) => <ProductCart key={index} data={element} setChange={setChange}></ProductCart>)}
                 </tbody>
             </table>
             <div className={style.byProduct}>
                 <h2>Total<strong>{totalPrice}</strong></h2>
                 <button>Realizar Pedido</button>
             </div>
-        </div >
+        </div>
     );
 }
 export default Cart;

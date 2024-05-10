@@ -1,7 +1,6 @@
 import style from "./productdetail.module.css"
 import Button from "../../Button/Button.jsx";
 const ProductDetail = ({ data }) => {
-    console.log(data);
     return (
         <div className={style.productdetail_Container}>
             <div className={style.productDetail}>

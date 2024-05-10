@@ -2,7 +2,6 @@
     width: 60vw;
     height: fit-content;
     margin: 5vh 20vw 1vh 20vw;
-    border: 1px solid red;
 
     .title {
         display: inline-block;
