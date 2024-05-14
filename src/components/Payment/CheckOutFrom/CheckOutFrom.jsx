@@ -1,5 +1,6 @@
 import { PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { useState, useEffect } from "react";
+import style from "./checkoutfrom.module.css"
 const CheckOutFrom = () => {
     const stripe = useStripe()
     const elements = useElements()
@@ -28,7 +29,34 @@ const CheckOutFrom = () => {
             }
         })
     }, [stripe])
-
-    return (<></>);
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        if (!stripe || !elements) return
+        setIsLoading(true)
+        const { error } = await stripe.confirmPayment({
+            elements,
+            confirmParams: {
+                return_url: ""//! PENDIENTE URL DEL BACKEND
+            }
+        })
+        if (error.type === "card_error" || error.type === "validation_error") {
+            setMessage(error.message)
+        } else setMessage("An unexpected error occurred")
+        setIsLoading(false)
+    }
+    const paymentElementOptions = {
+        layout: "tabs"
+    }
+    return (
+        <form className={style.from} onSubmit={handleSubmit}>
+            <PaymentElement id="payment-element" options={paymentElementOptions}></PaymentElement>
+            <button className={style.button} disabled={isLoading || !stripe || !elements} id="submit">
+                <span id="button-text">
+                    {isLoading ? <div className={style.spinner} id="spinner"></div> : "Pay now"}
+                </span>
+            </button>
+            {message && <div id="payment-message">{message}</div>}
+        </form>
+    );
 }
 export default CheckOutFrom;

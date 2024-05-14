@@ -1,10 +1,12 @@
 import style from "./cart.module.css"
 import { useEffect, useState } from "react";
 import ProductCart from "./ProductCart/ProductCart.jsx";
+import Payment from "../Payment/Payment.jsx";
 const Cart = () => {
     const [data, setData] = useState([])
     const [totalPrice, setTotalPrice] = useState(0)
     const [change, setChange] = useState(false)
+    const [payComponent, setPayComponet] = useState(false)
     useEffect(() => {
         const getData = async () => {
             const query = await fetch(`http://localhost:8080/api/carts/`, { credentials: "include" })
@@ -21,6 +23,10 @@ const Cart = () => {
         })
         setTotalPrice(total)
     }, [data])
+    const handleClick = () => {
+        console.log("Click");
+        setPayComponet(true)
+    }
     return (
         <div className={style.Cart_Page}>
             <h2 className={style.title}>Mi Compra</h2>
@@ -39,8 +45,9 @@ const Cart = () => {
             </table>
             <div className={style.byProduct}>
                 <h2>Total<strong>{totalPrice}</strong></h2>
-                <button>Realizar Pedido</button>
+                <button onClick={handleClick}>Realizar Pedido</button>
             </div>
+            {payComponent && <Payment data={data}></Payment>}
         </div>
     );
 }
