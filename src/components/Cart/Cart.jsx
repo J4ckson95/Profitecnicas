@@ -1,12 +1,13 @@
-import style from "./cart.module.css"
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import style from "./cart.module.css"
 import ProductCart from "./ProductCart/ProductCart.jsx";
 import Payment from "../Payment/Payment.jsx";
 const Cart = () => {
     const [data, setData] = useState([])
     const [totalPrice, setTotalPrice] = useState(0)
     const [change, setChange] = useState(false)
-    const [payComponent, setPayComponet] = useState(false)
+    const navigete = useNavigate()
     useEffect(() => {
         const getData = async () => {
             const query = await fetch(`http://localhost:8080/api/carts/`, { credentials: "include" })
@@ -24,8 +25,7 @@ const Cart = () => {
         setTotalPrice(total)
     }, [data])
     const handleClick = () => {
-        console.log("Click");
-        setPayComponet(true)
+        navigete("/payment")
     }
     return (
         <div className={style.Cart_Page}>
@@ -47,7 +47,6 @@ const Cart = () => {
                 <h2>Total<strong>{totalPrice}</strong></h2>
                 <button onClick={handleClick}>Realizar Pedido</button>
             </div>
-            {payComponent && <Payment data={data}></Payment>}
         </div>
     );
 }
