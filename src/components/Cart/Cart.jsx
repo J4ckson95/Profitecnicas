@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./cart.module.css"
 import ProductCart from "./ProductCart/ProductCart.jsx";
-import Payment from "../Payment/Payment.jsx";
 const Cart = () => {
     const [data, setData] = useState([])
     const [totalPrice, setTotalPrice] = useState(0)
@@ -25,7 +24,7 @@ const Cart = () => {
         setTotalPrice(total)
     }, [data])
     const handleClick = () => {
-        navigete("/payment")
+        navigete("/payment", { state: { totalPrice } })
     }
     return (
         <div className={style.Cart_Page}>
